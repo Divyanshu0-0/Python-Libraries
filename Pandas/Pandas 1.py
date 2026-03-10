@@ -45,4 +45,4 @@ import pandas as pd
 date = ["Come", "Bitch"]
 
 series = pd.Series(date)
-print(series)
+print(series) 
