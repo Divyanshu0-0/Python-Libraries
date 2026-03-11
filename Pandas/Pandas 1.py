@@ -1,11 +1,10 @@
 # Series = A Pandas 1_Dimensional labeled array that can hold any data type
 #             Think of it like a single column in a spreadsheet  (1-Dimensional)
 
-import pandas as pd
+# import pandas as pd
 # print(pd.__version__)
 # print("Hello")
 
-#
 
 # import pandas as pd
 #
@@ -42,7 +41,18 @@ import pandas as pd
 
 # date = [123, 5443, 676]
 # date = ["C", 123, 5443, 676]
-date = ["Come", "Bitch"]
+# date = ["Come", "Bitch"]
+#
+# series = pd.Series(date)
+# print(series)
 
-series = pd.Series(date)
-print(series) 
+# q = pd.Series(range(0, 7, 2))
+# q = pd.Series(["apple", "banana", "orange"], name="fruit")
+
+# q = pd.DataFrame([
+#     [0, 1, 2],
+#     [3, 4, 5],
+#     [6, 7, 8], ])
+
+# q = pd.DataFrame([ [0, 1, 2], [3, 4, 5], [6, 7, 8], ])
+# print(q)
