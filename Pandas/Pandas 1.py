@@ -1,6 +1,6 @@
 # Series = A Pandas 1_Dimensional labeled array that can hold any data type
 #             Think of it like a single column in a spreadsheet  (1-Dimensional)
-
+import typer.cli
 # import pandas as pd
 
 # print(pd.__version__)
@@ -71,7 +71,7 @@
 
 # Calculator for Calories consumed per Days
 
-import pandas as pd
+# import pandas as pd
 from scipy.constants import calorie
 
 # calories = {"Mon" : 2400, "Tues" : 2490, "Wed" : 2500, "Thus" : 2700, "Fri" : 2900, "Sat" : 2690, "Sun" : 4000}
@@ -95,12 +95,80 @@ from scipy.constants import calorie
 
 # pokemons = ["Bulbasaur", "lvysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard"]
 # series = pd.Series(pokemons, index=[1,2,3,4,5,6])
-#
+# series = pd.Series(pokemons)
 # print(series)
+
+
+# import pandas as pd
+
+# pokemon_names = ['Bulbasaur', 'lvysaur', 'Venusaur', 'Charmander', 'Charmeleon', 'Charizard']
+# custom_index = [1,2,3,4,5,6]
+#
+# pokemon_series = pd.Series(pokemon_names, index=custom_index)
+#
+# print(pokemon_series)
+
+
+# data = {
+#     'pokemon' : ['Bulbasaur', 'lvysaur', 'Venusaur',
+#                  'Charmander', 'Charmeleon', 'Charizard']
+# }
+# df = pd.DataFrame(data)
+# df.index = df.index + 1
+#
+# print(df)
+# print(df.type)
+
+# Problem is this is "str" Type not "Object" Type
 
 # ---------------- DataFrames -----------------
 
 # DataFrames = A tabular data structure with rows AND columns. (2 Dimensional
-              # it`s similar to an Excel Spreadsheet
+              # it's similar to an Excel Spreadsheet
+#
+# import pandas as pd
+#
+# data = {
+#     "Name" : ["KimjongUng", "PingPongUng", "JethaJungUng"],
+#     "Age" : [48, 39, 59]
+# }
+
+# df = pd.DataFrame(data)
+# print(df)
+
+# df = pd.DataFrame(data, index=["President", "Vice-President", "Supreme"])
+# print(df)
+# print(df.loc["Supreme"])
+# print(df.iloc[2])
+
+# Add a new column
+
+# df["Strength"] = ["Non Human", "gOD level", "Invincible"]
+# print(df)
+
+# ----------- Add a new Row -------------
+
+# new_row = pd.DataFrame([{"Name" : "Xinjong", "Age" : "56", "Strength" : "Human Level"}]
+#                        , index=["Chinese"])
+# df = pd.concat([df, new_row])
+# print(df)
+
+# ----------- Add new Rows -------------
+#
+# new_rows = pd.DataFrame([{"Name" : "Xinjong", "Age" : "56", "Strength" : "Human Level"},
+#                         {"Name": "Hisuka", "Age": "19", "Strength": "InHuman Level"}],
+#                        index=["Chinese","Japanese"])
+# df = pd.concat([df, new_rows])
+# print(df)
+
+# ---------------- Importing -----------------
+
+# CSV = Comma-separated values
+# JSON = JavaScript Object Notation
 
 import pandas as pd
+
+df = pd.read_csv("data.csv") # For CSV file
+# df = pd.read_json("data.json") # For JSON file
+# print(df)
+print(df.to_string()) # For Print EveryThing in Data File
