@@ -1,5 +1,6 @@
 # Series = A Pandas 1_Dimensional labeled array that can hold any data type
 #             Think of it like a single column in a spreadsheet  (1-Dimensional)
+
 import typer.cli
 # import pandas as pd
 
@@ -166,9 +167,21 @@ from scipy.constants import calorie
 # CSV = Comma-separated values
 # JSON = JavaScript Object Notation
 
-import pandas as pd
+# import pandas as pd
 
-df = pd.read_csv("data.csv") # For CSV file
+# df = pd.read_csv("data.csv") # For CSV file
 # df = pd.read_json("data.json") # For JSON file
 # print(df)
-print(df.to_string()) # For Print EveryThing in Data File
+# print(df.to_string()) # For Print EveryThing in Data File
+
+
+# ---------------- Selection -----------------
+
+import pandas as pd
+
+# df = pd.read_csv("Data.csv")
+
+# SELECTION BY COLUMN
+df = pd.read_csv("data.csv") # For CSV file
+print(df)
+# print(df["Name"])
