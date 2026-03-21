@@ -177,11 +177,39 @@ from scipy.constants import calorie
 
 # ---------------- Selection -----------------
 
-import pandas as pd
+# import pandas as pd
 
 # df = pd.read_csv("Data.csv")
 
-# SELECTION BY COLUMN
-df = pd.read_csv("data.csv") # For CSV file
-print(df)
-# print(df["Name"])
+# SELECTION BY COLUMN --------------
+
+# df = pd.read_csv("anual.csv") # For CSV file
+
+# df = pd.read_csv("anual.csv", index_col="year")   # List Columns Start with years
+
+# print(df)
+# print(df["name"])
+# print(df["name"].to_string())   # for print Entire Thinks (Names)
+# print(df["year"].to_string())   # for print Entire years
+# print(df["code"].to_string())   # for print Entire code
+
+# print(df[["name", "year", "code"]])   # for print more than one
+# print(df[["name", "year", "code"]].to_string())   # for print more than one (Entire)
+
+
+# SELECTION BY ROWS ---------------
+
+import pandas as pd
+
+df = pd.read_csv("pokemon.csv", index_col="Name") # For CSV file
+
+# print(df.loc[0])
+# print(df.loc[1])
+
+print(df.loc["Pikachu"])
+
+
+# import pandas as pd
+#
+# df = pd.read_json("settings.json") # For JSON file
+# print(df)
